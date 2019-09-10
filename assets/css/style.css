@@ -1,0 +1,21 @@
+.btn {
+    height: 180px;
+    width: 180px;
+    margin-left: 65px
+
+}
+
+.jumbotron {
+    background: radial-gradient(#e66465, #9198e5);
+    text-align: center;
+    color: blanchedalmond;
+}
+
+#instructions {
+    background: gray;
+    text-align: left;
+}
+
+.card-body {
+    text-align: center
+}
