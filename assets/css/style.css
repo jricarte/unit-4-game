@@ -6,16 +6,46 @@
 }
 
 .jumbotron {
-    background: radial-gradient(#e66465, #9198e5);
+    background: transparent;
     text-align: center;
-    color: blanchedalmond;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 #instructions {
-    background: gray;
+    background: transparent;
     text-align: left;
+    font-weight: bolder
+}
+
+.card{
+    margin-left: 200px;
+    margin-right: 200px;
+    background: transparent;
+    color: white;
 }
 
 .card-body {
-    text-align: center
+    text-align: center;
+    background: transparent;
+    font-size: 25px;
+    font-family: 'Press Start 2P', cursive;
+    margin-left: 200px;
+    margin-right: 200px;    
+}
+
+h2 {
+    font-size: 50px
+}
+
+span {
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background-image: url('https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif');
+    background-size: cover;
 }

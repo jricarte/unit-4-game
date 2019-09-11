@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,61 +8,91 @@
     <!-- reset.css link -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- BootStrap CSS link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Gem Collector!</title>
 </head>
+
 <body>
-        <div class="jumbotron">
-                <h1 class="display-4">💎 Gem Collector 💎</h1>
-                <p class="lead">Collect the right amount of crystals to meet the given amount.</p>
-                <hr class="my-4">
-              </div>
+    <div class="jumbotron">
+        <h1 class="display-4">💎 Gem Collector 💎</h1>
+        <p class="lead">Collect the right amount of Gems to win!</p>
+        <hr class="my-4">
+    </div>
 
-        <div id="instructions" class="jumbotron jumbotron-fluid">
-                    <div class="container">
-                      <h1 class="display-4">How to play</h1>
-                      <br>
-                      <ol type="1"> <strong>Match your point total with the random number to win!</strong>
-                            <br>
-                            <br>
-                                <li>1. A random number will be given at the begininng of the round.</li>
-                                <li>2. Click the gems below to increase your point total.</li>
-                                <li>3. Each gem has a specific value that changes every round.</li>
-                                <li>4. Match your point total with the random number to win! If you go over the random number, you lose!</li>
-                        
-                     </ol>  
-                    </div>
-                  </div>
-
-        <div class="card">
-                <div id="goal" class="card-body"></div>
-                <div class="card-body">
-                    Your Point Total: <span id="myPoints">0</span>
-                </div>
-                      </div>
-                    <br>
-                    <br>
-
-
+    <div id="instructions" class="jumbotron jumbotron-fluid">
         <div class="container">
-            <div class="row-md-12">
-                <div class="col-md-12">
-                
-                    <button type="button" class="btn btn-outline-primary"><img src="assets/images/sapphire.png"><br>Sapphire</button>
-                    <button type="button" class="btn btn-outline-secondary"><img src="assets/images/diamond.png"><br>Diamond</button>
-                    <button type="button" class="btn btn-outline-success"><img src="assets/images/emerald.png"><br>Emerald</button>
-                    <button type="button" class="btn btn-outline-danger"><img src="assets/images/ruby.png"><br>Ruby</button>
+            <h1 class="display-4">How to play:</h1>
+            <br>
+            <ol type="1"> <strong>Match your point total with the target number to win!</strong>
+                <br>
+                <br>
+                <li>1. A target number will be given at the begininng of the round.</li>
+                <li>2. Each gem has a specific value that changes every round.</li>
+                <li>3. Click the gems below to increase your point total.</li>
+                <li>4. Match your point total with the random number to win! If you go over the target number, you lose!
+                </li>
+
+            </ol>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            Target Number: <span id="goal">0</span>
+        </div>
+
+    </div>
+    <div class="card">
+        <div class="card-body">
+            Your Point Total: <span id="myScore">0</span>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+
+
+    <div class="container">
+        <div class="row-md-12">
+            <div class="col-md-12">
+
+                <button type="button" id="gem1" class="btn btn-outline-primary"><img
+                        src="assets/images/sapphire.png"><br>Sapphire</button>
+                <button type="button" id="gem2" class="btn btn-outline-secondary"><img
+                        src="assets/images/diamond.png"><br>Diamond</button>
+                <button type="button" id="gem3" class="btn btn-outline-success"><img
+                        src="assets/images/emerald.png"><br>Emerald</button>
+                <button type="button" id="gem4" class="btn btn-outline-danger"><img
+                        src="assets/images/ruby.png"><br>Ruby</button>
 
             </div>
-            </div>
-            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            Wins: <span id="wins">0</span>
+            Losses: <span id="losses">0</span>
+        </div>
+    </div>
 
 
-<!-- BootStrap JS/JQuery link -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/javascript/game.js" ></script>
+    <!-- BootStrap JS/JQuery link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
+
 </html>
